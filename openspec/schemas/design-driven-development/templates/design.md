@@ -142,10 +142,10 @@ Create a mermaid diagram of the components used for this screen or component and
 ## Found Patterns
 
 <!--
-Record patterns noticed in the explicitly reviewed implementation files while preparing
-this design. Do not copy or restate patterns from specs/[domain]/design.md here.
-If a previously read global design document already describes the same pattern,
-omit it from this section.
+Record patterns or conventions noticed in the explicitly reviewed implementation 
+files while preparing this design. Do not copy or restate patterns seen before
+on specs/[domain]/design.md here. If a previously read global design document 
+already describes the same pattern, omit it from this section.
 -->
 
 - <!-- pattern observed in reviewed code -->

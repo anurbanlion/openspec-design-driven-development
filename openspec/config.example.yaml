@@ -1,7 +1,7 @@
-schema: minimal-design-task
+schema: design-driven-development
 
 context: |
-  # OpenSpec workflow: minimal-design-task.
+  # OpenSpec workflow: design-driven-development.
   
   This workflow is centered around having global and local `design.md` files as the single source of truth.
   

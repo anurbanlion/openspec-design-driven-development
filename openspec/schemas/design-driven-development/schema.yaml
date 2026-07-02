@@ -1,4 +1,4 @@
-name: minimal-design-task
+name: design-driven-development
 version: 1
 description: Minimal implementation workflow using design.md and tasks.md only.
 artifacts:
@@ -7,7 +7,7 @@ artifacts:
     description: Technical design and implementation strategy. This is the single source of truth.
     template: design.md
     instruction: |
-      Create only design.md for this change. design.md is the single source of truth.
+      Create design.md as the single source of truth for this change.
       Review only the files explicitly indicated by the user, plus the relevant
       global design documents under specs/[domain]/design. The index of
       available global design documents is provided in openspec/config.yaml
