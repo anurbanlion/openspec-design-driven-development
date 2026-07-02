@@ -1,17 +1,17 @@
 schema: minimal-design-task
 
 context: |
-  OpenSpec workflow: minimal-design-task.
+  # OpenSpec workflow: minimal-design-task.
   
-  design.md is the single source of truth.
+  This workflow is centered around having global and local `design.md` files as the single source of truth.
   
-  When creating design.md, review only files explicitly indicated by the user and relevant global design documents under specs/[domain]/design.
+  When creating a change's design.md, review only files explicitly indicated by the user and relevant global design documents under specs/[domain]/design.
   
-  # Global design index
+  ## Global design index
 
   - For general component or screen creation, first read general conventions at: openspec/specs/components-conventions/design.md
 
-  # Extra instructions
+  ## Notes
 
   When using the `archive` skill, ignore completely the sync skill, do no use it under any circumstance.
 

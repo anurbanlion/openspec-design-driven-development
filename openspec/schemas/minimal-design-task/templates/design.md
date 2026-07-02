@@ -3,18 +3,8 @@
 
 Before filling out this template:
 
-1. **List existing components** (file names only, do NOT read file contents) in:
-   - `packages/ui/src/primitives/`
-   - `packages/ui/src/marketplace/components/`
-   - `packages/ui/src/marketplace/screens/`
-   This gives you awareness of what already exists so you can reuse components
-   instead of designing duplicates.
-
-2. **Extract Figma styles, not just visuals.** When given a Figma node, extract
-   the design tokens and CSS properties (colors, spacing, font sizes, border
-   radii, shadows, etc.), not only the visual structure. The goal is to map
-   Figma values to existing design tokens or identify new ones needed.
-   Existing tokens live in `packages/ui/src/styles/tokens.css`.
+1. **Read relevant domain-specific designs** or documents under `specs/[domain]/design.md` to align on existing conventions and patterns.
+2. **Review any additional visual and design assets** provided, such as Figma nodes and styles (via Figma MCP tools if available) or images uploaded by the user, to ensure accurate implementation of the design specifications.
 -->
 
 # Main Components
