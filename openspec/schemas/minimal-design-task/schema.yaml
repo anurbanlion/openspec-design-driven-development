@@ -1,0 +1,32 @@
+name: minimal-design-task
+version: 1
+description: Minimal implementation workflow using design.md and tasks.md only.
+artifacts:
+  - id: design
+    generates: design.md
+    description: Technical design and implementation strategy. This is the single source of truth.
+    template: design.md
+    instruction: |
+      Create only design.md for this change. design.md is the single source of truth.
+      Review only the files explicitly indicated by the user, plus the relevant
+      global design documents under specs/[domain]/design. The index of
+      available global design documents is provided in openspec/config.yaml
+      context; do not discover or read other files unless the user explicitly
+      asks for them. Do not use proposal.md, specs/**/spec.md, delta specs,
+      synced specs, requirement extraction outputs, or sync workflows.
+    requires: []
+  - id: tasks
+    generates: tasks.md
+    description: Ordered implementation checklist derived exclusively from design.md.
+    template: tasks.md
+    instruction: |
+      Generate tasks.md exclusively from design.md. Tasks must be actionable,
+      verifiable, small implementation units, and ordered logically. Do not use
+      proposal.md, specs/**, spec.md, delta specs, synced specs, or requirement
+      extraction outputs.
+    requires:
+      - design
+apply:
+  requires:
+    - tasks
+  tracks: tasks.md
