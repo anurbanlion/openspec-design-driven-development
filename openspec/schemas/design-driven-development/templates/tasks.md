@@ -5,7 +5,7 @@
 ## 1. Preparation & Setup
 
 - [ ] 1.1 Review `design.md` and confirm the implementation scope.
-- [ ] 1.2 Identify and verify existing components in the codebase to maximize reuse.
+- [ ] 1.2 Read the implementation details of the components identified for reuse to understand their props and behavior.
 
 ## 2. <!-- Custom Task Group (e.g., Components Development) -->
 
@@ -19,4 +19,4 @@
 
 ## 4. Verification & Delivery
 
-- [ ] 4.1 Run all visual and functional validation strategies defined in the design.
+- [ ] 4.1 Run all visual and functional validation strategies previously defined.

@@ -12,7 +12,8 @@ Before filling out this template:
 <!--
 Each screen gets two consecutive code blocks:
 1. The high-level JSX skeleton showing how sub-components compose together.
-   Use HTML comments to annotate sections and reference Figma nodes when available.
+   - Use HTML comments to annotate sections and reference Figma nodes when available.
+   - Do NOT include styles, classes, or props in the JSX tags; keep them clean and focus purely on layout structure and conditional rendering.
 2. The TypeScript signature: imports (annotated new/existing), exported interfaces,
    and the function declaration.
 
@@ -25,17 +26,19 @@ Repeat the pair for every screen in the design.
   <Header />
   <main>
     <section>
-      {/* Brief annotation of this region */}
+      {/* Header and section details - [REUSED] */}
       <ChildComponent />
-      <ChildComponent />
+
+      {/* Render only when search results are available - [NEW] */}
+      {hasSearchResults && <ResultsList />}
     </section>
   </main>
 </>
 ```
 ```tsx
 // relative/path/to/Screen.tsx
-import type { ChildProps } from "../components/Child"  // new
-import type { ExistingProps } from "../components/Existing"  // existing
+import type { ChildProps } from "../components/Child"  // [NEW]
+import type { ExistingProps } from "../components/Existing"  // [REUSED]
 
 export interface ScreenProps {
   items: ChildProps[]
@@ -55,6 +58,7 @@ Rules:
   all in the same block separated by a "// ComponentName" comment.
 - Each block starts with a path comment, then alternates between layout skeleton
   and signature as needed.
+- Keep JSX skeletons clean by omitting styles, classes, or props in the tags.
 -->
 
 ```tsx
@@ -72,7 +76,7 @@ Rules:
     </div>
   </header>
   <div>
-    {/* Content area */}
+    {/* Content area - [REUSED]*/}
     <ExistingComponent />
   </div>
 </article>
@@ -85,12 +89,12 @@ Rules:
       <img />
     </div>
     <div>
-      {/* Another region */}
-      <p />
+      {/* Another region - [NEW]*/}
+      <NewComponent />
     </div>
   </header>
   <div>
-    {/* Content area */}
+    {/* Content area - [REUSED]*/}
     <ExistingComponent />
   </div>
 </article>

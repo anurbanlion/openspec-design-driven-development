@@ -12,9 +12,10 @@
 - [2. Naming](#2-naming)
   - [2.1 Component & File Naming](#21-component--file-naming)
 - [3. Component Rules](#3-component-rules)
-- [4. Integrations](#4-integrations)
-  - [4.1 Figma](#41-figma)
-  - [4.2 Storybook](#42-storybook)
+- [4. Validations](#4-validations)
+- [5. Integrations](#5-integrations)
+  - [5.1 Figma](#51-figma)
+  - [5.2 Storybook](#52-storybook)
 
 ---
 
@@ -63,9 +64,7 @@ Convention used for component names and their file names.
 ## 3. Component Rules
 
 >>> Editable
-**Max screen component width:** `"mx-auto w-full max-w-[393px] flex"`
-
-**Notes**: Apply only on `<main>` content
+**Max screen component width:** Use `"mx-auto w-full max-w-[393px] flex"` to constraint and center a screen content on its `<main>` tag.
 
 **Example:**
 
@@ -73,16 +72,35 @@ Convention used for component names and their file names.
 <main className="mx-auto w-full max-w-[393px] flex">
 ```
 
+>>> Editable
+**Conditional rendering:** Use the logical `&&` operator instead of the ternary operator `? Component : null` when rendering a single component conditionally.
+
+**Example:**
+
+```tsx
+{isLoggedIn && <UserAvatar />}
+```
+
 ---
 
-## 4. Integrations
+## 4. Validations
+
+Validation requirements and commands to verify code and design correctness before completing a task.
 
 >>> Editable
-### 4.1 Figma
+- Use `tsc --noEmit` to check type problems.
+- Do NOT build the project or attempt to run/serve it for validation tasks.
+
+---
+
+## 5. Integrations
+
+>>> Editable
+### 5.1 Figma
 
 When given a Figma node, extract the actual design tokens and CSS properties (colors, spacing, font sizes, border radii, shadows, etc.), not only the visual structure. The goal is to map Figma values to existing design tokens or identify new ones needed.
 
-**Download assets:** Download any visual assets (such as JPGs/PNGs used in the mocks) into the mock assets path defined below unless there are other options (like storybook defaults).
+**Download assets:** Download any visual assets (such as JPGs/PNGs used in the mocks) into the mock assets path defined below unless there are other options (ex. storybook defaults).
 
 **Mock assets path:**
 
@@ -90,14 +108,12 @@ When given a Figma node, extract the actual design tokens and CSS properties (co
  `mock/images/figma`
 
 >>> Editable
-### 4.2 Storybook
+### 5.2 Storybook
 
 Every component must have a corresponding Storybook file for visual testing and documentation.
 
-**File pattern:** 
-
 >>> Editable
-`<ComponentName>.stories.tsx`
+**File pattern:** `<ComponentName>.stories.tsx`
 
 **Example:**
 
