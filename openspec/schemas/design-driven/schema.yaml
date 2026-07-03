@@ -1,4 +1,4 @@
-name: design-driven-development
+name: design-driven
 version: 1
 description: Minimal implementation workflow using design.md and tasks.md only.
 artifacts:
@@ -23,7 +23,9 @@ artifacts:
       Generate tasks.md exclusively from design.md. Tasks must be actionable,
       verifiable, small implementation units, and ordered logically. Do not use
       proposal.md, specs/**, spec.md, delta specs, synced specs, or requirement
-      extraction outputs.
+      extraction outputs. Do not generate tasks.md inmediatly when using propose
+      command, only after the user explicitly approves the design or if the user
+      asks to use the apply command.
     requires:
       - design
 apply:

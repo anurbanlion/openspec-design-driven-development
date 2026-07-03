@@ -1,7 +1,9 @@
-schema: design-driven-development
+schema: design-driven
 
 context: |
-  # OpenSpec workflow: design-driven-development.
+  Tech stack: TypeScript, React, Nextjs
+
+  # OpenSpec workflow: design-driven
   
   This workflow is centered around having global and local `design.md` files as the single source of truth.
   
@@ -9,9 +11,9 @@ context: |
   
   ## Global design index
 
-  - For general component or screen creation, first read general conventions at: openspec/specs/components-conventions/design.md
+  - General creation or refactor for components
+    - openspec/specs/components-conventions/design.md
 
   ## Notes
 
   When using the `archive` skill, ignore completely the sync skill, do no use it under any circumstance.
-
